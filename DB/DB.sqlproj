@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build">
+    <Sdk Name="Microsoft.Build.Sql" Version="2.2.0"/>
+    <PropertyGroup>
+        <Name>DB</Name>
+        <DSP>Microsoft.Data.Tools.Schema.Sql.Sql170DatabaseSchemaProvider</DSP>
+        <ModelCollation>1033, CI</ModelCollation>
+        <ProjectGuid>F50FF0C5-C138-40F4-86DC-4DAC8D5F20AC</ProjectGuid>
+    </PropertyGroup>
+</Project>

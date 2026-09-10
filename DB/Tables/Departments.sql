@@ -1,0 +1,11 @@
+CREATE TABLE [dbo].[Departments]
+(
+    Id INT NOT NULL PRIMARY KEY,
+    Name NVARCHAR(100) NOT NULL UNIQUE CHECK (LEN(Name) >= 2),
+    IsActive BIT NOT NULL DEFAULT 1,
+    CreatedAt DATETIME2 NOT NULL DEFAULT GETUTCDATE()
+);
+GO;
+
+CREATE NONCLUSTERED INDEX IX_Departments_Name ON [dbo].[Departments](Name) WHERE IsActive = 1;
+GO;

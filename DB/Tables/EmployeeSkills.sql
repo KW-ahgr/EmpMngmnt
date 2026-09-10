@@ -1,0 +1,11 @@
+CREATE TABLE [dbo].[EmployeeSkills]
+(
+    Id INT NOT NULL PRIMARY KEY,
+    EmployeeId INT NOT NULL FOREIGN KEY REFERENCES Employees(Id) ON DELETE CASCADE,
+    SkillName NVARCHAR(55) NOT NULL,
+    Level VARCHAR(8) NOT NULL DEFAULT '0'
+);
+GO;
+
+CREATE NONCLUSTERED INDEX IX_EmployeeSkills_SkillName ON EmployeeSkills(SkillName) INCLUDE (Level);
+GO;
